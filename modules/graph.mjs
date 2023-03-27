@@ -5,9 +5,8 @@ const Graph = () => {
     adjacencyList.set(vertex, []);
   };
 
-  const addEdge = (firstVertex, secondVertex) => {
-    adjacencyList.get(firstVertex).push(secondVertex);
-    adjacencyList.get(secondVertex).push(firstVertex);
+  const addEdge = (leaves, enter) => {
+    adjacencyList.get(leaves).push(enter);
   };
 
   return { adjacencyList, addVertex, addEdge };
