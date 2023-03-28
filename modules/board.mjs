@@ -49,6 +49,12 @@ const Board = () => {
     return row * currentBoardSize + column;
   };
 
+  const vertexToCoordinate = (vertex) => {
+    return `[${Math.floor(vertex / currentBoardSize)}, ${
+      vertex % currentBoardSize
+    }]`;
+  };
+
   return { generateBoard };
 };
 
